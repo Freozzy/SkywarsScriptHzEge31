@@ -42,7 +42,7 @@ SkyScriptleriSection:NewButton("Bypass", "Bunu Acin Yoksa Fly Acamazsiniz", func
 end)
 local SkyScriptleriSection = SkyScriptleri:NewSection("Hitbox Scriptleri")
 SkyScriptleriSection:NewButton("Hitbox Expander", "Hitbox Guisi", function()
-    loadstring(game:HttpGet('loadstring(game:HttpGet("http://gameovers.net/Scripts/Free/HitboxExpander/main.lua", true))()'))()
+    loadstring(game:HttpGet('loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/shit%20script%20pack/CheatX", true))()'))()
 end)
 
 --Ayarlar
