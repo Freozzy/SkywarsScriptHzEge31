@@ -1,0 +1,47 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Sikiyle Wars Gui | HzEge31", "BloodTheme")
+
+--Genel
+local Genel = Window:NewTab("Genel")
+local GenelSection = Genel:NewSection("Oyuncu Ayarları")
+GenelSection:NewSlider("Speed", "Hizinizi Ayarlarlarsiniz", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+GenelSection:NewSlider("Jump", "Zıplama Mesafenizi Ayarlarlarsiniz", 250, 50, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+end)
+
+--Genel Scriptler
+local ananScriptler = Window:NewTab("Genel Scriptler")
+local ananScriptlerSection = ananScriptler:NewSection("Genel Scriptler")
+ananScriptlerSection:NewButton("Chat Ozel Gorme", "Ozelden Konusulanları Gorebilirsiniz", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/-zelG-rme31/main/ÖzelGörme31'))()
+end)
+local ananScriptlerSection = ananScriptler:NewSection("Admin Scriptleri")
+ananScriptlerSection:NewButton("Infinite Yield", "Infinite Yield Admin Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+ananScriptlerSection:NewButton("Reviz Admin", "Reviz Admin Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/RevizAdmin/main/RevizAdmin31'))()
+end)
+ananScriptlerSection:NewButton("Fe Admin", "Fe Admin Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/FeAdmin/main/FeAdmin31'))()
+end)
+
+--Sky Scriptleri
+local SkyScriptleri = Window:NewTab("Skywars Scriptler")
+local SkyScriptleriSection = SkyScriptleri:NewSection("Skywars Scriptleri")
+SkyScriptleriSection:NewButton("Bypass", "Bunu Acin Yoksa Fly Acamazsiniz", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/SkywarsBypass31/main/SkywarsBypass31'))()
+end)
+local SkyScriptleriSection = SkyScriptleri:NewSection("Hitbox Scriptleri")
+SkyScriptleriSection:NewButton("Hitbox Expander", "Hitbox Guisi", function()
+    loadstring(game:HttpGet('loadstring(game:HttpGet("http://gameovers.net/Scripts/Free/HitboxExpander/main.lua", true))()'))()
+end)
+
+--Ayarlar
+local Ayarlar = Window:NewTab("Ayarlar")
+local AyarlarSection = Ayarlar:NewSection("Ayarlar")
+AyarlarSection:NewKeybind("UI Kisayolu", "UI'yi Acma Kapama Tusu", Enum.KeyCode.E, function()
+	Library:ToggleUI()
+end)
