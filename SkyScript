@@ -50,10 +50,34 @@ local SkyScriptleriSection = SkyScriptleri:NewSection("Hitbox Scriptleri")
 SkyScriptleriSection:NewButton("Hitbox Expander", "Hitbox Guisi", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/shit%20script%20pack/CheatX'))()
 end)
+local SkyScriptleriSection = SkyScriptleri:NewSection("Teleportlar")
+SkyScriptleriSection:NewButton("Mega Vip", "Mega Vipe Teleportlar", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/MvipTp/main/MegaVipTp'))()
+end)
+SkyScriptleriSection:NewButton("Vip", "Vipe Teleportlar", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/VipTp/main/VipTp'))()
+end)
+SkyScriptleriSection:NewButton("Shop", "Shopa Teleportlar", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/ShopTp/main/ShopaTp'))()
+end)
+SkyScriptleriSection:NewButton("Mid", "Ortaya Teleportlar", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/Freozzy/MidTp/main/MidTp'))()
+end)
 
 --Ayarlar
 local Ayarlar = Window:NewTab("Ayarlar")
 local AyarlarSection = Ayarlar:NewSection("Ayarlar")
 AyarlarSection:NewKeybind("UI Kisayolu", "UI'yi Acma Kapama Tusu", Enum.KeyCode.E, function()
 	Library:ToggleUI()
+end)
+
+--Test
+local Test = Window:NewTab("Test")
+local TestSection = Test:NewSection("Test")
+TestSection:NewToggle("Xray", "Bloklarin Arkasini Görmenize Yarar", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
 end)
