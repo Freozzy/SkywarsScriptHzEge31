@@ -70,14 +70,3 @@ local AyarlarSection = Ayarlar:NewSection("Ayarlar")
 AyarlarSection:NewKeybind("UI Kisayolu", "UI'yi Acma Kapama Tusu", Enum.KeyCode.E, function()
 	Library:ToggleUI()
 end)
-
---Test
-local Test = Window:NewTab("Test")
-local TestSection = Test:NewSection("Test")
-TestSection:NewToggle("Xray", "Bloklarin Arkasini Görmenize Yarar", function(state)
-    if state then
-        print("Toggle On")
-    else
-        print("Toggle Off")
-    end
-end)
